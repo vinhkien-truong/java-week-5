@@ -8,44 +8,44 @@ import java.util.List;
  * 
  * Tasks:
  * 1. Write a generic method printArray(T[] array) that prints all elements
- *    - Test it with String[], Integer[], and Double[] arrays
+ *    - Try it with String[], Integer[], and Double[] arrays
  * 
  * 2. Write a generic method reverse(T[] array) that returns a new array
  *    with elements in reverse order
- *    - Test with different array types
+ *    - Try with different array types
  * 
  * 3. Write a method findMin(List<? extends Number> numbers) that returns
  *    the smallest number as a double
- *    - Test with List<Integer> and List<Double>
+ *    - Try with List<Integer> and List<Double>
  * 
  * 4. Create a generic class Calculator<T extends Number>
  *    - Add add(), subtract(), multiply() methods that work with T
  *    - Return results as double
- *    - Test with Integer and Double
+ *    - Try with Integer and Double
  * 
  * 5. Write a method countGreaterThan(T[] array, T element) that counts
  *    how many elements are greater than the given element
  *    - T must be Comparable
- *    - Test with different types
+ *    - Try with different types
  */
 public class Exercise2 {
     
     public static void main(String[] args) {
         System.out.println("=== Task 1: Print Array ===\n");
         
-        // TODO: Test printArray method
+        // TODO: Call printArray method
         String[] words = {"Hello", "World", "Java"};
         Integer[] numbers = {1, 2, 3, 4, 5};
         
         
         System.out.println("\n=== Task 2: Reverse Array ===\n");
         
-        // TODO: Test reverse method
+        // TODO: Call reverse method
         
         
         System.out.println("\n=== Task 3: Find Minimum ===\n");
         
-        // TODO: Test findMin method
+        // TODO: Call findMin method
         List<Integer> integers = new ArrayList<>();
         integers.add(10);
         integers.add(5);
@@ -55,12 +55,12 @@ public class Exercise2 {
         
         System.out.println("\n=== Task 4: Calculator ===\n");
         
-        // TODO: Create and test Calculator instances
+        // TODO: Create and use Calculator instances
         
         
         System.out.println("\n=== Task 5: Count Greater Than ===\n");
         
-        // TODO: Test countGreaterThan method
+        // TODO: Call countGreaterThan method
         
     }
     

@@ -19,7 +19,7 @@ package generics.exercises;
  *    - Add getKey() and getValue() methods
  *    - Add a swap() method that returns a new Pair<V, K> with swapped values
  * 
- * 4. Test Pair with:
+ * 4. Try Pair with:
  *    - Pair<String, Integer> for ("age", 25)
  *    - Swap it and print both pairs
  */
@@ -28,12 +28,12 @@ public class Exercise1 {
     public static void main(String[] args) {
         System.out.println("=== Task 1 & 2: Container Class ===\n");
         
-        // TODO: Create Container instances and test them
+        // TODO: Create Container instances and use them
         
         
         System.out.println("\n=== Task 3 & 4: Pair Class ===\n");
         
-        // TODO: Create Pair instances, test swap() method
+        // TODO: Create Pair instances, try swap() method
         
     }
 }
