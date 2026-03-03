@@ -2,6 +2,7 @@ package dates.exercises;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAdjusters;
 
 /**
  * Exercise 2: Date Arithmetic
@@ -49,10 +50,13 @@ public class Exercise2 {
         
         
         // TODO: BONUS - Last day of next month (Hint: use TemporalAdjusters)
-        LocalDate nextMonth = today.plusMonths(1);
+       /*  LocalDate nextMonth = today.plusMonths(1);
         LocalDate lastDayOfNextMonth = nextMonth.withDayOfMonth(nextMonth.lengthOfMonth());
         System.out.println("Last day of next month: " + lastDayOfNextMonth.format(fmt));
 
-        
+        */
+
+        LocalDate lastDayOfNextMonth = today.plusMonths(1).with(TemporalAdjusters.lastDayOfMonth());
+        System.out.println("Last day of next month: " + lastDayOfNextMonth.format(fmt));
     }
 }
