@@ -1,6 +1,9 @@
 package dates.exercises;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 /**
  * Exercise 1: Basic Date and Time Operations
@@ -16,16 +19,24 @@ import java.time.LocalDate;
  */
 public class Exercise1 {
     public static void main(String[] args) {
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         // TODO: Task 1 - Create your birthday
-        LocalDate birthday = null; // Replace with your birthday
+        LocalDate birthday = LocalDate.of(1994, 8, 26); // Replace with your birthday
+
+
 
         // TODO: Task 2 - Print formatted birthday message
-        
-
+        System.out.printf("I was born on %s%n", birthday.format(fmt));
         // TODO: Task 3 - Check if leap year
-
-
+        System.out.println("Was I born in a leap year? " + birthday.isLeapYear());
         // TODO: Task 4 - Print day of year you were born
-        
+        System.out.println("I was born on day " + birthday.getDayOfYear() + " of the year.");
+
+        DateTimeFormatter timeFmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+
+        LocalDateTime birthdayTime = LocalDateTime.of(birthday, LocalDateTime.now().toLocalTime());
+        System.out.println("My birthday and wake-up time: " + birthdayTime.format(timeFmt));
+        System.out.println("Days old today: " + ChronoUnit.DAYS.between(birthday, LocalDate.now())); // https://stackoverflow.com/questions/27005861/calculate-days-between-two-dates-in-java-8
+        System.out.println("Day of the year I was born: " + birthday.getDayOfYear());
     }
 }
