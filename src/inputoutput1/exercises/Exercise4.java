@@ -7,7 +7,7 @@
  * 4. After writing, print "File written successfully!".
  */
 
-package introduction.exercises;
+package inputoutput1.exercises;
 
 import java.io.File;
 import java.io.FileWriter;

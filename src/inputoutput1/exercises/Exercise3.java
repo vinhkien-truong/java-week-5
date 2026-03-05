@@ -7,7 +7,7 @@
  * 4. Print the total number of files and directories found.
  */
 
-package introduction.exercises;
+package inputoutput1.exercises;
 
 import java.io.File;
 

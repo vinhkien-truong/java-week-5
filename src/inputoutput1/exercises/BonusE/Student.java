@@ -1,4 +1,4 @@
-package introduction.exercises.BonusE;
+package inputoutput1.exercises.BonusE;
 
 import java.util.List;
 

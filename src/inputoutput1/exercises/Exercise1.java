@@ -8,7 +8,7 @@
  * 4. If it doesn’t exist, print a message saying "File not found!".
  */
 
-package introduction.exercises;
+package inputoutput1.exercises;
 
 import java.io.File;
 
