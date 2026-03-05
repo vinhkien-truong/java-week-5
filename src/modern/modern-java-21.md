@@ -13,26 +13,50 @@ public final class Circle extends Shape {}
 public non-sealed class Rectangle extends Shape {}
 ```
 
-- Restricts which classes can extend or implement a type.
-- Use `final`, `sealed`, or `non-sealed` on permitted subclasses.
+Sealed classes restrict which classes are allowed to extend or implement a type.
+
+Normally, any class could extend a public class.
+With sealed classes, the parent class explicitly defines the allowed subclasses using the permits keyword.
+
+Permitted subclasses must declare one of the following:
+
+final → cannot be extended further
+
+sealed → can restrict its own subclasses
+
+non-sealed → removes the restriction again
+
+This gives developers more control over inheritance hierarchies.
+
+
+
 
 ---
 
 ## 2. Pattern Matching for instanceof
 
 ```java
+//Traditionally, instanceof required two steps:
+if (obj instanceof String) {
+    String text = (String) obj;
+}
+
+
 if (obj instanceof String text)
 {
     System.out.println(text.length());
 }
+//Modern Java combines type checking and casting into one step.
 ```
 
-- Combines type check and cast.
-- Pattern variable is scoped to the true branch.
+The variable (text) is called a pattern variable and is only available in the branch where the check succeeds.
 
 ---
 
 ## Learning Outcomes
 
-- Explain what sealed classes are used for.
-- Recognize pattern matching with `instanceof`.
+Explain the purpose of sealed classes
+
+Recognize pattern matching with instanceof
+
+Understand how modern Java reduces boilerplate casting
