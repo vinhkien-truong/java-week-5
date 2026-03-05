@@ -8,10 +8,30 @@
 
 package introduction.exercises;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public class Exercise5
 {
     public static void main(String[] args)
     {
+        String sourcePath = "resources" + File.separator + "source.txt";
+        String destPath = "resources" + File.separator + "backup.txt";
+
+        try (FileInputStream inputStream = new FileInputStream(sourcePath);
+             FileOutputStream outputStream = new FileOutputStream(destPath)) {
+
+            int byteData;
+            while ((byteData = inputStream.read()) != -1)
+            {
+                outputStream.write(byteData);
+            }
+            System.out.println("File copied successfully!");
+        } catch (IOException e) {
+            System.out.println("Error copying file: " + e.getMessage());
+        }
 
     }
 }

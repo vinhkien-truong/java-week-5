@@ -1,0 +1,6 @@
+Java I/O is powerful.
+Streams make reading and writing easier.
+Streams make reading and writing easier.
+Java I/O is powerful.
+Streams make reading and writing easier.
+Streams make reading and writing easier.

@@ -9,10 +9,30 @@
 
 package introduction.exercises;
 
+import java.io.File;
+
 public class Exercise3
 {
     public static void main(String[] args)
     {
+        File directory = new File("resources");
+        File[] items = directory.listFiles();
+        int fileCount = 0;
+        int dirCount = 0;
 
+        if (items != null) {
+            for (File item : items) {
+                if (item.isDirectory()) {
+                    System.out.println("[DIR] " + item.getName());
+                    dirCount++;
+                } else {
+                    System.out.println("[FILE] " + item.getName());
+                    fileCount++;
+                }
+            }
+        }
+
+        System.out.println("Total files: " + fileCount);
+        System.out.println("Total directories: " + dirCount);
     }
 }
